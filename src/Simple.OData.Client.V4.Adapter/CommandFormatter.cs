@@ -19,6 +19,9 @@ namespace Simple.OData.Client.V4.Adapter
         {
             var type = value?.GetType();
 
+            if (type != null && _session.TypeCache.Converter.HasObjectConverter(type))
+                value = _session.TypeCache.Converter.Convert(value, type);
+
             if (value != null && _session.TypeCache.IsEnumType(type))
                 value = new ODataEnumValue(value.ToString(), _session.Metadata.GetQualifiedTypeName(type.Name));
             if (value is ODataExpression expression)

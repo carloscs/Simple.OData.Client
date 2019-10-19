@@ -17,7 +17,12 @@ namespace Simple.OData.Client.V3.Adapter
 
         public override string ConvertValueToUriLiteral(object value, bool escapeDataString)
         {
-            if (value != null && _session.TypeCache.IsEnumType(value.GetType()))
+            var type = value?.GetType();
+
+            if (type != null && _session.TypeCache.Converter.HasObjectConverter(type))
+                value = _session.TypeCache.Converter.Convert(value, type);
+
+            if (value != null && _session.TypeCache.IsEnumType(type))
                 value = Convert.ToInt32(value);
             if (value is ODataExpression expression)
                 return expression.AsString(_session);
