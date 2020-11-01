@@ -28,6 +28,9 @@
       <group targetFramework="netstandard2.0">
         <dependency id="Microsoft.OData.Core" version="[7.6.0,8)" />
       </group>
+      <group targetFramework="netcoreapp3.1">
+        <dependency id="Microsoft.OData.Core" version="[7.6.0,8)" />
+      </group>
     </dependencies>
   </metadata>
   <files>
@@ -44,5 +47,12 @@
     <file src="build\Release\Simple.OData.Client.Dynamic\netstandard2.0\Simple.OData.Client.Dynamic.dll" target="lib\netstandard2.0\Simple.OData.Client.Dynamic.dll" />
     <file src="build\Release\Simple.OData.Client.Dynamic\netstandard2.0\Simple.OData.Client.Dynamic.xml" target="lib\netstandard2.0\Simple.OData.Client.Dynamic.xml" />
     <file src="build\Release\Simple.OData.Client.V4.Adapter\netstandard2.0\Simple.OData.Client.V4.Adapter.dll" target="lib\netstandard2.0\Simple.OData.Client.V4.Adapter.dll" />
+
+    <!-- NETCOREAPP3.1 -->
+    <file src="build\Release\Simple.OData.Client.Core\netcoreapp3.1\Simple.OData.Client.Core.dll" target="lib\netcoreapp3.1\Simple.OData.Client.Core.dll" />
+    <file src="build\Release\Simple.OData.Client.Core\netcoreapp3.1\Simple.OData.Client.Core.xml" target="lib\netcoreapp3.1\Simple.OData.Client.Core.xml" />
+    <file src="build\Release\Simple.OData.Client.Dynamic\netcoreapp3.1\Simple.OData.Client.Dynamic.dll" target="lib\netcoreapp3.1\Simple.OData.Client.Dynamic.dll" />
+    <file src="build\Release\Simple.OData.Client.Dynamic\netcoreapp3.1\Simple.OData.Client.Dynamic.xml" target="lib\netcoreapp3.1\Simple.OData.Client.Dynamic.xml" />
+    <file src="build\Release\Simple.OData.Client.V4.Adapter\netcoreapp3.1\Simple.OData.Client.V4.Adapter.dll" target="lib\netcoreapp3.1\Simple.OData.Client.V4.Adapter.dll" />
   </files>
 </package>
